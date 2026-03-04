@@ -5,15 +5,214 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+    android:background="#383737"
     tools:context=".MainActivity">
 
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:id="@+id/title"
+        android:layout_width="191dp"
+        android:layout_height="39dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Tip Calculator"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.018"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="305dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="488dp"
+        app:chipSpacingHorizontal="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditText"
+        app:layout_constraintVertical_bias="0.0"
+        app:chipBackgroundColor="@color/chip_color"
+        app:singleSelection="true"
+        app:chipStrokeColor="@color/chip_color"
+        android:checkable="true"
+        app:singleLine="true">
+
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/tip15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:clickable="true"
+            android:focusable="true"
+             />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/tip20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:checkable="true"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/tip25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:checkable="true"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/notip"
+            android:layout_width="wrap_content"
+            android:checkable="true"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+           />
+    </com.google.android.material.chip.ChipGroup>
+
+
+    <TextView
+        android:id="@+id/textfor15"
+        android:layout_width="40dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:text="15%"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textfor20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.167"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
+
+    <TextView
+        android:id="@+id/textfor20"
+        android:layout_width="40dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:text="20%"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.374"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textfor25"
+        android:layout_width="40dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:text="25%"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textfor20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.598"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
+
+    <TextView
+        android:id="@+id/notiptext"
+        android:layout_width="67dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:text="No Tip"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textfor25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.854"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/equalsign"
+        android:layout_width="74dp"
+        android:layout_height="114dp"
+        android:layout_marginBottom="336dp"
+        android:gravity="center"
+        android:text="="
+        android:textColor="@color/white"
+        android:textSize="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.192"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditText"
+        android:layout_width="286dp"
+        android:layout_height="39dp"
+        android:backgroundTint="#FFFFFF"
+        android:backgroundTintMode="src_atop"
+        android:contextClickable="true"
+        android:cursorVisible="true"
+        android:fontFamily="sans-serif-medium"
+        android:hint="Enter your Total Amount."
+        android:inputType="number|numberDecimal"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FAFAFA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.212" />
+
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="171dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="36dp"
+        android:gravity="center|center_horizontal"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/equalsign"
+        app:layout_constraintTop_toTopOf="@+id/equalsign"
+        app:layout_constraintVertical_bias="0.072" />
+
+    <TextView
+        android:id="@+id/tipamounT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.656"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/output"
+        app:layout_constraintVertical_bias="0.0" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
